@@ -55,5 +55,4 @@ npm run dev
 2. `fetch_venue_data.py` uses Gemini to enrich the venues with altitudes and climates.
 3. When a user clicks "Analyze" on the frontend, the FastAPI backend sends the static venue data to Gemini, telling it to research live injuries and predict how the altitude and missing players will affect the tactical matchup.
 
-## 🤝 Contributing
-Feel free to fork this project, submit pull requests, or use this Two-Step AI architecture pattern for your own projects!
+
