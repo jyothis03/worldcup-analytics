@@ -1,0 +1,578 @@
+[
+    {
+        "id": 1,
+        "date": "2026-06-11T13:00:00-06:00",
+        "home_team": "Mexico",
+        "away_team": "South Africa",
+        "group": "Group A",
+        "venue": "Mexico City"
+    },
+    {
+        "id": 2,
+        "date": "2026-06-11T20:00:00-06:00",
+        "home_team": "South Korea",
+        "away_team": "Czech Republic",
+        "group": "Group A",
+        "venue": "Guadalajara (Zapopan)"
+    },
+    {
+        "id": 3,
+        "date": "2026-06-18T12:00:00-04:00",
+        "home_team": "Czech Republic",
+        "away_team": "South Africa",
+        "group": "Group A",
+        "venue": "Atlanta"
+    },
+    {
+        "id": 4,
+        "date": "2026-06-18T19:00:00-06:00",
+        "home_team": "Mexico",
+        "away_team": "South Korea",
+        "group": "Group A",
+        "venue": "Guadalajara (Zapopan)"
+    },
+    {
+        "id": 5,
+        "date": "2026-06-24T19:00:00-06:00",
+        "home_team": "Czech Republic",
+        "away_team": "Mexico",
+        "group": "Group A",
+        "venue": "Mexico City"
+    },
+    {
+        "id": 6,
+        "date": "2026-06-24T19:00:00-06:00",
+        "home_team": "South Africa",
+        "away_team": "South Korea",
+        "group": "Group A",
+        "venue": "Monterrey (Guadalupe)"
+    },
+    {
+        "id": 7,
+        "date": "2026-06-12T15:00:00-04:00",
+        "home_team": "Canada",
+        "away_team": "Bosnia & Herzegovina",
+        "group": "Group B",
+        "venue": "Toronto"
+    },
+    {
+        "id": 8,
+        "date": "2026-06-13T12:00:00-07:00",
+        "home_team": "Qatar",
+        "away_team": "Switzerland",
+        "group": "Group B",
+        "venue": "San Francisco Bay Area (Santa Clara)"
+    },
+    {
+        "id": 9,
+        "date": "2026-06-18T12:00:00-07:00",
+        "home_team": "Switzerland",
+        "away_team": "Bosnia & Herzegovina",
+        "group": "Group B",
+        "venue": "Los Angeles (Inglewood)"
+    },
+    {
+        "id": 10,
+        "date": "2026-06-18T15:00:00-07:00",
+        "home_team": "Canada",
+        "away_team": "Qatar",
+        "group": "Group B",
+        "venue": "Vancouver"
+    },
+    {
+        "id": 11,
+        "date": "2026-06-24T12:00:00-07:00",
+        "home_team": "Switzerland",
+        "away_team": "Canada",
+        "group": "Group B",
+        "venue": "Vancouver"
+    },
+    {
+        "id": 12,
+        "date": "2026-06-24T12:00:00-07:00",
+        "home_team": "Bosnia & Herzegovina",
+        "away_team": "Qatar",
+        "group": "Group B",
+        "venue": "Seattle"
+    },
+    {
+        "id": 13,
+        "date": "2026-06-13T18:00:00-04:00",
+        "home_team": "Brazil",
+        "away_team": "Morocco",
+        "group": "Group C",
+        "venue": "New York/New Jersey (East Rutherford)"
+    },
+    {
+        "id": 14,
+        "date": "2026-06-13T21:00:00-04:00",
+        "home_team": "Haiti",
+        "away_team": "Scotland",
+        "group": "Group C",
+        "venue": "Boston (Foxborough)"
+    },
+    {
+        "id": 15,
+        "date": "2026-06-19T18:00:00-04:00",
+        "home_team": "Scotland",
+        "away_team": "Morocco",
+        "group": "Group C",
+        "venue": "Boston (Foxborough)"
+    },
+    {
+        "id": 16,
+        "date": "2026-06-19T20:30:00-04:00",
+        "home_team": "Brazil",
+        "away_team": "Haiti",
+        "group": "Group C",
+        "venue": "Philadelphia"
+    },
+    {
+        "id": 17,
+        "date": "2026-06-24T18:00:00-04:00",
+        "home_team": "Scotland",
+        "away_team": "Brazil",
+        "group": "Group C",
+        "venue": "Miami (Miami Gardens)"
+    },
+    {
+        "id": 18,
+        "date": "2026-06-24T18:00:00-04:00",
+        "home_team": "Morocco",
+        "away_team": "Haiti",
+        "group": "Group C",
+        "venue": "Atlanta"
+    },
+    {
+        "id": 19,
+        "date": "2026-06-12T18:00:00-07:00",
+        "home_team": "USA",
+        "away_team": "Paraguay",
+        "group": "Group D",
+        "venue": "Los Angeles (Inglewood)"
+    },
+    {
+        "id": 20,
+        "date": "2026-06-13T21:00:00-07:00",
+        "home_team": "Australia",
+        "away_team": "Turkey",
+        "group": "Group D",
+        "venue": "Vancouver"
+    },
+    {
+        "id": 21,
+        "date": "2026-06-19T12:00:00-07:00",
+        "home_team": "USA",
+        "away_team": "Australia",
+        "group": "Group D",
+        "venue": "Seattle"
+    },
+    {
+        "id": 22,
+        "date": "2026-06-19T20:00:00-07:00",
+        "home_team": "Turkey",
+        "away_team": "Paraguay",
+        "group": "Group D",
+        "venue": "San Francisco Bay Area (Santa Clara)"
+    },
+    {
+        "id": 23,
+        "date": "2026-06-25T19:00:00-07:00",
+        "home_team": "Turkey",
+        "away_team": "USA",
+        "group": "Group D",
+        "venue": "Los Angeles (Inglewood)"
+    },
+    {
+        "id": 24,
+        "date": "2026-06-25T19:00:00-07:00",
+        "home_team": "Paraguay",
+        "away_team": "Australia",
+        "group": "Group D",
+        "venue": "San Francisco Bay Area (Santa Clara)"
+    },
+    {
+        "id": 25,
+        "date": "2026-06-14T12:00:00-05:00",
+        "home_team": "Germany",
+        "away_team": "Cura\u00e7ao",
+        "group": "Group E",
+        "venue": "Houston"
+    },
+    {
+        "id": 26,
+        "date": "2026-06-14T19:00:00-04:00",
+        "home_team": "Ivory Coast",
+        "away_team": "Ecuador",
+        "group": "Group E",
+        "venue": "Philadelphia"
+    },
+    {
+        "id": 27,
+        "date": "2026-06-20T16:00:00-04:00",
+        "home_team": "Germany",
+        "away_team": "Ivory Coast",
+        "group": "Group E",
+        "venue": "Toronto"
+    },
+    {
+        "id": 28,
+        "date": "2026-06-20T19:00:00-05:00",
+        "home_team": "Ecuador",
+        "away_team": "Cura\u00e7ao",
+        "group": "Group E",
+        "venue": "Kansas City"
+    },
+    {
+        "id": 29,
+        "date": "2026-06-25T16:00:00-04:00",
+        "home_team": "Cura\u00e7ao",
+        "away_team": "Ivory Coast",
+        "group": "Group E",
+        "venue": "Philadelphia"
+    },
+    {
+        "id": 30,
+        "date": "2026-06-25T16:00:00-04:00",
+        "home_team": "Ecuador",
+        "away_team": "Germany",
+        "group": "Group E",
+        "venue": "New York/New Jersey (East Rutherford)"
+    },
+    {
+        "id": 31,
+        "date": "2026-06-14T15:00:00-05:00",
+        "home_team": "Netherlands",
+        "away_team": "Japan",
+        "group": "Group F",
+        "venue": "Dallas (Arlington)"
+    },
+    {
+        "id": 32,
+        "date": "2026-06-14T20:00:00-06:00",
+        "home_team": "Sweden",
+        "away_team": "Tunisia",
+        "group": "Group F",
+        "venue": "Monterrey (Guadalupe)"
+    },
+    {
+        "id": 33,
+        "date": "2026-06-20T12:00:00-05:00",
+        "home_team": "Netherlands",
+        "away_team": "Sweden",
+        "group": "Group F",
+        "venue": "Houston"
+    },
+    {
+        "id": 34,
+        "date": "2026-06-20T22:00:00-06:00",
+        "home_team": "Tunisia",
+        "away_team": "Japan",
+        "group": "Group F",
+        "venue": "Monterrey (Guadalupe)"
+    },
+    {
+        "id": 35,
+        "date": "2026-06-25T18:00:00-05:00",
+        "home_team": "Japan",
+        "away_team": "Sweden",
+        "group": "Group F",
+        "venue": "Dallas (Arlington)"
+    },
+    {
+        "id": 36,
+        "date": "2026-06-25T18:00:00-05:00",
+        "home_team": "Tunisia",
+        "away_team": "Netherlands",
+        "group": "Group F",
+        "venue": "Kansas City"
+    },
+    {
+        "id": 37,
+        "date": "2026-06-15T12:00:00-07:00",
+        "home_team": "Belgium",
+        "away_team": "Egypt",
+        "group": "Group G",
+        "venue": "Seattle"
+    },
+    {
+        "id": 38,
+        "date": "2026-06-15T18:00:00-07:00",
+        "home_team": "Iran",
+        "away_team": "New Zealand",
+        "group": "Group G",
+        "venue": "Los Angeles (Inglewood)"
+    },
+    {
+        "id": 39,
+        "date": "2026-06-21T12:00:00-07:00",
+        "home_team": "Belgium",
+        "away_team": "Iran",
+        "group": "Group G",
+        "venue": "Los Angeles (Inglewood)"
+    },
+    {
+        "id": 40,
+        "date": "2026-06-21T18:00:00-07:00",
+        "home_team": "New Zealand",
+        "away_team": "Egypt",
+        "group": "Group G",
+        "venue": "Vancouver"
+    },
+    {
+        "id": 41,
+        "date": "2026-06-26T20:00:00-07:00",
+        "home_team": "Egypt",
+        "away_team": "Iran",
+        "group": "Group G",
+        "venue": "Seattle"
+    },
+    {
+        "id": 42,
+        "date": "2026-06-26T20:00:00-07:00",
+        "home_team": "New Zealand",
+        "away_team": "Belgium",
+        "group": "Group G",
+        "venue": "Vancouver"
+    },
+    {
+        "id": 43,
+        "date": "2026-06-15T12:00:00-04:00",
+        "home_team": "Spain",
+        "away_team": "Cape Verde",
+        "group": "Group H",
+        "venue": "Atlanta"
+    },
+    {
+        "id": 44,
+        "date": "2026-06-15T18:00:00-04:00",
+        "home_team": "Saudi Arabia",
+        "away_team": "Uruguay",
+        "group": "Group H",
+        "venue": "Miami (Miami Gardens)"
+    },
+    {
+        "id": 45,
+        "date": "2026-06-21T12:00:00-04:00",
+        "home_team": "Spain",
+        "away_team": "Saudi Arabia",
+        "group": "Group H",
+        "venue": "Atlanta"
+    },
+    {
+        "id": 46,
+        "date": "2026-06-21T18:00:00-04:00",
+        "home_team": "Uruguay",
+        "away_team": "Cape Verde",
+        "group": "Group H",
+        "venue": "Miami (Miami Gardens)"
+    },
+    {
+        "id": 47,
+        "date": "2026-06-26T19:00:00-05:00",
+        "home_team": "Cape Verde",
+        "away_team": "Saudi Arabia",
+        "group": "Group H",
+        "venue": "Houston"
+    },
+    {
+        "id": 48,
+        "date": "2026-06-26T18:00:00-06:00",
+        "home_team": "Uruguay",
+        "away_team": "Spain",
+        "group": "Group H",
+        "venue": "Guadalajara (Zapopan)"
+    },
+    {
+        "id": 49,
+        "date": "2026-06-16T15:00:00-04:00",
+        "home_team": "France",
+        "away_team": "Senegal",
+        "group": "Group I",
+        "venue": "New York/New Jersey (East Rutherford)"
+    },
+    {
+        "id": 50,
+        "date": "2026-06-16T18:00:00-04:00",
+        "home_team": "Iraq",
+        "away_team": "Norway",
+        "group": "Group I",
+        "venue": "Boston (Foxborough)"
+    },
+    {
+        "id": 51,
+        "date": "2026-06-22T17:00:00-04:00",
+        "home_team": "France",
+        "away_team": "Iraq",
+        "group": "Group I",
+        "venue": "Philadelphia"
+    },
+    {
+        "id": 52,
+        "date": "2026-06-22T20:00:00-04:00",
+        "home_team": "Norway",
+        "away_team": "Senegal",
+        "group": "Group I",
+        "venue": "New York/New Jersey (East Rutherford)"
+    },
+    {
+        "id": 53,
+        "date": "2026-06-26T15:00:00-04:00",
+        "home_team": "Norway",
+        "away_team": "France",
+        "group": "Group I",
+        "venue": "Boston (Foxborough)"
+    },
+    {
+        "id": 54,
+        "date": "2026-06-26T15:00:00-04:00",
+        "home_team": "Senegal",
+        "away_team": "Iraq",
+        "group": "Group I",
+        "venue": "Toronto"
+    },
+    {
+        "id": 55,
+        "date": "2026-06-16T20:00:00-05:00",
+        "home_team": "Argentina",
+        "away_team": "Algeria",
+        "group": "Group J",
+        "venue": "Kansas City"
+    },
+    {
+        "id": 56,
+        "date": "2026-06-16T21:00:00-07:00",
+        "home_team": "Austria",
+        "away_team": "Jordan",
+        "group": "Group J",
+        "venue": "San Francisco Bay Area (Santa Clara)"
+    },
+    {
+        "id": 57,
+        "date": "2026-06-22T12:00:00-05:00",
+        "home_team": "Argentina",
+        "away_team": "Austria",
+        "group": "Group J",
+        "venue": "Dallas (Arlington)"
+    },
+    {
+        "id": 58,
+        "date": "2026-06-22T20:00:00-07:00",
+        "home_team": "Jordan",
+        "away_team": "Algeria",
+        "group": "Group J",
+        "venue": "San Francisco Bay Area (Santa Clara)"
+    },
+    {
+        "id": 59,
+        "date": "2026-06-27T21:00:00-05:00",
+        "home_team": "Algeria",
+        "away_team": "Austria",
+        "group": "Group J",
+        "venue": "Kansas City"
+    },
+    {
+        "id": 60,
+        "date": "2026-06-27T21:00:00-05:00",
+        "home_team": "Jordan",
+        "away_team": "Argentina",
+        "group": "Group J",
+        "venue": "Dallas (Arlington)"
+    },
+    {
+        "id": 61,
+        "date": "2026-06-17T12:00:00-05:00",
+        "home_team": "Portugal",
+        "away_team": "DR Congo",
+        "group": "Group K",
+        "venue": "Houston"
+    },
+    {
+        "id": 62,
+        "date": "2026-06-17T20:00:00-06:00",
+        "home_team": "Uzbekistan",
+        "away_team": "Colombia",
+        "group": "Group K",
+        "venue": "Mexico City"
+    },
+    {
+        "id": 63,
+        "date": "2026-06-23T12:00:00-05:00",
+        "home_team": "Portugal",
+        "away_team": "Uzbekistan",
+        "group": "Group K",
+        "venue": "Houston"
+    },
+    {
+        "id": 64,
+        "date": "2026-06-23T20:00:00-06:00",
+        "home_team": "Colombia",
+        "away_team": "DR Congo",
+        "group": "Group K",
+        "venue": "Guadalajara (Zapopan)"
+    },
+    {
+        "id": 65,
+        "date": "2026-06-27T19:30:00-04:00",
+        "home_team": "Colombia",
+        "away_team": "Portugal",
+        "group": "Group K",
+        "venue": "Miami (Miami Gardens)"
+    },
+    {
+        "id": 66,
+        "date": "2026-06-27T19:30:00-04:00",
+        "home_team": "DR Congo",
+        "away_team": "Uzbekistan",
+        "group": "Group K",
+        "venue": "Atlanta"
+    },
+    {
+        "id": 67,
+        "date": "2026-06-17T15:00:00-05:00",
+        "home_team": "England",
+        "away_team": "Croatia",
+        "group": "Group L",
+        "venue": "Dallas (Arlington)"
+    },
+    {
+        "id": 68,
+        "date": "2026-06-17T19:00:00-04:00",
+        "home_team": "Ghana",
+        "away_team": "Panama",
+        "group": "Group L",
+        "venue": "Toronto"
+    },
+    {
+        "id": 69,
+        "date": "2026-06-23T16:00:00-04:00",
+        "home_team": "England",
+        "away_team": "Ghana",
+        "group": "Group L",
+        "venue": "Boston (Foxborough)"
+    },
+    {
+        "id": 70,
+        "date": "2026-06-23T19:00:00-04:00",
+        "home_team": "Panama",
+        "away_team": "Croatia",
+        "group": "Group L",
+        "venue": "Toronto"
+    },
+    {
+        "id": 71,
+        "date": "2026-06-27T17:00:00-04:00",
+        "home_team": "Panama",
+        "away_team": "England",
+        "group": "Group L",
+        "venue": "New York/New Jersey (East Rutherford)"
+    },
+    {
+        "id": 72,
+        "date": "2026-06-27T17:00:00-04:00",
+        "home_team": "Croatia",
+        "away_team": "Ghana",
+        "group": "Group L",
+        "venue": "Philadelphia"
+    }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Toronto",
+        "altitude_meters": 75,
+        "summer_climate": "Warm, Humid"
+    },
+    {
+        "name": "Kansas City",
+        "altitude_meters": 275,
+        "summer_climate": "Hot, Humid"
+    },
+    {
+        "name": "Atlanta",
+        "altitude_meters": 320,
+        "summer_climate": "Hot, Humid"
+    },
+    {
+        "name": "Dallas (Arlington)",
+        "altitude_meters": 180,
+        "summer_climate": "Hot, Humid"
+    },
+    {
+        "name": "Monterrey (Guadalupe)",
+        "altitude_meters": 500,
+        "summer_climate": "Hot, Semi-arid"
+    },
+    {
+        "name": "Seattle",
+        "altitude_meters": 10,
+        "summer_climate": "Mild, Dry"
+    },
+    {
+        "name": "New York/New Jersey (East Rutherford)",
+        "altitude_meters": 10,
+        "summer_climate": "Hot, Humid"
+    },
+    {
+        "name": "Los Angeles (Inglewood)",
+        "altitude_meters": 30,
+        "summer_climate": "Warm, Dry"
+    },
+    {
+        "name": "Guadalajara (Zapopan)",
+        "altitude_meters": 1560,
+        "summer_climate": "Warm, Rainy"
+    },
+    {
+        "name": "San Francisco Bay Area (Santa Clara)",
+        "altitude_meters": 10,
+        "summer_climate": "Mild, Dry"
+    },
+    {
+        "name": "Boston (Foxborough)",
+        "altitude_meters": 95,
+        "summer_climate": "Warm, Humid"
+    },
+    {
+        "name": "Miami (Miami Gardens)",
+        "altitude_meters": 3,
+        "summer_climate": "Hot, Humid"
+    },
+    {
+        "name": "Mexico City",
+        "altitude_meters": 2240,
+        "summer_climate": "Mild, Rainy"
+    },
+    {
+        "name": "Vancouver",
+        "altitude_meters": 10,
+        "summer_climate": "Mild, Dry"
+    },
+    {
+        "name": "Houston",
+        "altitude_meters": 20,
+        "summer_climate": "Hot, Humid"
+    },
+    {
+        "name": "Philadelphia",
+        "altitude_meters": 10,
+        "summer_climate": "Hot, Humid"
+    }
+]

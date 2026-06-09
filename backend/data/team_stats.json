@@ -1,0 +1,242 @@
+[
+  {
+    "team_name": "Mexico",
+    "fifa_ranking": 15,
+    "base_camp_location": "Mexico City"
+  },
+  {
+    "team_name": "South Africa",
+    "fifa_ranking": 60,
+    "base_camp_location": "Pachuca"
+  },
+  {
+    "team_name": "South Korea",
+    "fifa_ranking": 25,
+    "base_camp_location": "Guadalajara"
+  },
+  {
+    "team_name": "Czech Republic",
+    "fifa_ranking": 41,
+    "base_camp_location": "Dallas"
+  },
+  {
+    "team_name": "Canada",
+    "fifa_ranking": 30,
+    "base_camp_location": "Vancouver"
+  },
+  {
+    "team_name": "Bosnia & Herzegovina",
+    "fifa_ranking": 65,
+    "base_camp_location": "Sandy"
+  },
+  {
+    "team_name": "Qatar",
+    "fifa_ranking": 55,
+    "base_camp_location": "Santa Barbara"
+  },
+  {
+    "team_name": "Switzerland",
+    "fifa_ranking": 19,
+    "base_camp_location": "San Diego"
+  },
+  {
+    "team_name": "Brazil",
+    "fifa_ranking": 6,
+    "base_camp_location": "New York New Jersey"
+  },
+  {
+    "team_name": "Morocco",
+    "fifa_ranking": 8,
+    "base_camp_location": "New York New Jersey"
+  },
+  {
+    "team_name": "Haiti",
+    "fifa_ranking": 83,
+    "base_camp_location": "New York New Jersey"
+  },
+  {
+    "team_name": "Scotland",
+    "fifa_ranking": 43,
+    "base_camp_location": "Charlotte"
+  },
+  {
+    "team_name": "USA",
+    "fifa_ranking": 16,
+    "base_camp_location": "Irvine"
+  },
+  {
+    "team_name": "Paraguay",
+    "fifa_ranking": 40,
+    "base_camp_location": "San Francisco Bay Area"
+  },
+  {
+    "team_name": "Australia",
+    "fifa_ranking": 27,
+    "base_camp_location": "San Francisco Bay Area"
+  },
+  {
+    "team_name": "Turkey",
+    "fifa_ranking": 22,
+    "base_camp_location": "Mesa"
+  },
+  {
+    "team_name": "Germany",
+    "fifa_ranking": 10,
+    "base_camp_location": "Winston-Salem"
+  },
+  {
+    "team_name": "Curaçao",
+    "fifa_ranking": 82,
+    "base_camp_location": "Boca Raton"
+  },
+  {
+    "team_name": "Ivory Coast",
+    "fifa_ranking": 34,
+    "base_camp_location": "Philadelphia"
+  },
+  {
+    "team_name": "Ecuador",
+    "fifa_ranking": 23,
+    "base_camp_location": "Columbus"
+  },
+  {
+    "team_name": "Netherlands",
+    "fifa_ranking": 7,
+    "base_camp_location": "Kansas City"
+  },
+  {
+    "team_name": "Japan",
+    "fifa_ranking": 18,
+    "base_camp_location": "Nashville"
+  },
+  {
+    "team_name": "Sweden",
+    "fifa_ranking": 38,
+    "base_camp_location": "Dallas"
+  },
+  {
+    "team_name": "Tunisia",
+    "fifa_ranking": 44,
+    "base_camp_location": "Monterrey"
+  },
+  {
+    "team_name": "Belgium",
+    "fifa_ranking": 9,
+    "base_camp_location": "Renton"
+  },
+  {
+    "team_name": "Egypt",
+    "fifa_ranking": 29,
+    "base_camp_location": "Spokane"
+  },
+  {
+    "team_name": "Iran",
+    "fifa_ranking": 21,
+    "base_camp_location": "Tijuana"
+  },
+  {
+    "team_name": "New Zealand",
+    "fifa_ranking": 85,
+    "base_camp_location": "San Diego"
+  },
+  {
+    "team_name": "Spain",
+    "fifa_ranking": 2,
+    "base_camp_location": "Chattanooga"
+  },
+  {
+    "team_name": "Cape Verde",
+    "fifa_ranking": 69,
+    "base_camp_location": "Tampa"
+  },
+  {
+    "team_name": "Saudi Arabia",
+    "fifa_ranking": 61,
+    "base_camp_location": "Austin"
+  },
+  {
+    "team_name": "Uruguay",
+    "fifa_ranking": 17,
+    "base_camp_location": "Cancun"
+  },
+  {
+    "team_name": "France",
+    "fifa_ranking": 3,
+    "base_camp_location": "Boston"
+  },
+  {
+    "team_name": "Senegal",
+    "fifa_ranking": 14,
+    "base_camp_location": "New York New Jersey"
+  },
+  {
+    "team_name": "Iraq",
+    "fifa_ranking": 57,
+    "base_camp_location": "Greenbrier County"
+  },
+  {
+    "team_name": "Norway",
+    "fifa_ranking": 31,
+    "base_camp_location": "Greensboro"
+  },
+  {
+    "team_name": "Argentina",
+    "fifa_ranking": 1,
+    "base_camp_location": "Kansas City"
+  },
+  {
+    "team_name": "Algeria",
+    "fifa_ranking": 28,
+    "base_camp_location": "Kansas City"
+  },
+  {
+    "team_name": "Austria",
+    "fifa_ranking": 24,
+    "base_camp_location": "Goleta"
+  },
+  {
+    "team_name": "Jordan",
+    "fifa_ranking": 63,
+    "base_camp_location": "Portland"
+  },
+  {
+    "team_name": "Portugal",
+    "fifa_ranking": 5,
+    "base_camp_location": "Palm Beach Gardens"
+  },
+  {
+    "team_name": "DR Congo",
+    "fifa_ranking": 46,
+    "base_camp_location": "Houston"
+  },
+  {
+    "team_name": "Uzbekistan",
+    "fifa_ranking": 50,
+    "base_camp_location": "Atlanta"
+  },
+  {
+    "team_name": "Colombia",
+    "fifa_ranking": 13,
+    "base_camp_location": "Guadalajara"
+  },
+  {
+    "team_name": "England",
+    "fifa_ranking": 4,
+    "base_camp_location": "Kansas City"
+  },
+  {
+    "team_name": "Croatia",
+    "fifa_ranking": 11,
+    "base_camp_location": "Alexandria"
+  },
+  {
+    "team_name": "Ghana",
+    "fifa_ranking": 74,
+    "base_camp_location": "Boston"
+  },
+  {
+    "team_name": "Panama",
+    "fifa_ranking": 33,
+    "base_camp_location": "New Tecumseth"
+  }
+]
