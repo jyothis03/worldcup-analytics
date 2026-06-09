@@ -31,57 +31,103 @@ def build_match_context(match_id: int):
 
 def get_match_prediction(match_id: int):
 
-    context= build_match_context(match_id)
+    context = build_match_context(match_id)
     if not context:
         return None
 
-    api_key = settings.gemini_api_key
-    client = genai.Client(api_key=api_key)
+    client = genai.Client(api_key=settings.gemini_api_key)
 
-    prompt = f"""
-    You are an elite football tactical analyst predicting World Cup 2026 matches.
-    
-    MATCH DETAILS:
-    - {context['match']['home_team']} vs {context['match']['away_team']}
-    - Group: {context['match']['group']}
-    
-    VENUE IMPACT:
-    - Playing at: {context['venue_data']['name']}
-    - Altitude: {context['venue_data']['altitude_meters']} meters above sea level
-    - Expected Climate: {context['venue_data']['summer_climate']}
-    
-    HOME TEAM ({context['match']['home_team']}):
-    - FIFA Rank: {context['home_stats']['fifa_ranking']}
-    - Base Camp: {context['home_stats']['base_camp_location']}
-    
-    AWAY TEAM ({context['match']['away_team']}):
-    - FIFA Rank: {context['away_stats']['fifa_ranking']}
-    - Base Camp: {context['away_stats']['base_camp_location']}
-    
-    INSTRUCTIONS:
-    Analyze how the altitude, climate, and travel from their base camps will impact stamina.
-    Also how different is the altitude from their base camps and analyse if it will be impactful. 
-    Analyze the tactical matchup based on their FIFA rankings, recent form, injuries, current squad strength,
-    goal scoring tendency, goal conceding tendency, h2h results, expected 11, motivation, pressure, historical squad strengths etc and anything relevant.
-    Predict the final score and identify the key tactical battles.
-    """
+    # ── STEP 1: Research call ──────────────────────────────────
+    # Google Search is ON. No JSON schema.
+    # Gemini searches for current injuries, form, squad news.
+    research_prompt = f"""
+You are an elite football tactical analyst with access to current squad news.
+Search for the latest information on both teams before analysing.
+
+MATCH:
+{context['match']['home_team']} vs {context['match']['away_team']}
+Group: {context['match']['group']}
+Date: {context['match']['date']}
+
+VENUE:
+Stadium: {context['venue_data']['name']}
+Altitude: {context['venue_data']['altitude_meters']}m above sea level
+Climate: {context['venue_data']['summer_climate']}
+
+{context['match']['home_team']}:
+FIFA Rank: {context['home_stats']['fifa_ranking']}
+Base camp: {context['home_stats']['base_camp_location']}
+
+{context['match']['away_team']}:
+FIFA Rank: {context['away_stats']['fifa_ranking']}
+Base camp: {context['away_stats']['base_camp_location']}
+
+ANALYSIS INSTRUCTIONS:
+Search for and use current information on:
+- Confirmed injuries and suspensions for both squads
+- Expected starting XI based on recent selections
+- Last 5 match results and form for each team
+- Head-to-head record
+
+Then analyse:
+- Venue impact: altitude difference from base camps, climate effect on stamina
+- Tactical matchup: formations, pressing style, defensive shape
+- Goal threat and defensive vulnerability of each team
+- Key individual battles that will decide the match
+- Motivation, pressure, tournament context
+
+STRICT RULES:
+- key_players must ONLY include fit, available, expected starters
+- Do NOT include any player who is injured, suspended, or out of form
+- injuries list must include every known fitness concern, even doubts
+- predicted_score must be your single most likely scoreline
+- confidence must reflect genuine uncertainty — rarely above 0.80
+"""
 
     try:
-        response = client.models.generate_content(
+        research_response = client.models.generate_content(
             model='gemini-2.5-flash',
-            contents=prompt,
+            contents=research_prompt,
+            config=types.GenerateContentConfig(
+                tools=[types.Tool(google_search=types.GoogleSearch())],
+                temperature=0.7,
+            ),
+        )
+        research_text = research_response.text
+
+    except Exception as e:
+        print(f"Error in research step: {e}")
+        return None
+
+    # ── STEP 2: Structure call ─────────────────────────────────
+    # Google Search is OFF. JSON schema is ON.
+    # Gemini just reorganises the research into clean JSON.
+    
+    structure_prompt = f"""
+Convert the following football match analysis into the required JSON format.
+Do not add new opinions or invent information.
+Only structure what is already present in the analysis below.
+
+ANALYSIS:
+{research_text}
+"""
+
+    try:
+        final_response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=structure_prompt,
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
                 response_schema=PredictionResponse,
-                temperature=0.7
+                temperature=0.2,
             ),
         )
+
     except Exception as e:
-        print(f"Error calling Gemini: {e}")
+        print(f"Error in structure step: {e}")
         return None
 
-    prediction_dict = json.loads(response.text)
-    
-    prediction_dict["match_id"] = match_id 
-    
-    return prediction_dict    
+    prediction_dict = json.loads(final_response.text)
+    prediction_dict["match_id"] = match_id
+
+    return prediction_dict
