@@ -1,9 +1,11 @@
 from google import genai
 from google.genai import types
-import json
+import json, time
 from backend.app.core.config import settings
 from backend.app.services.data_service import get_match_by_id, get_all_teams, get_all_venues
 from backend.app.models.prediction import PredictionResponse
+
+
 
 def build_match_context(match_id: int):
 
@@ -28,6 +30,27 @@ def build_match_context(match_id: int):
         "away_stats": away_stats,
         "venue_data": venue_data
     }
+
+def generate_with_retry(client, model, contents, config, max_retries=3):
+    """Wraps the Gemini API call in an exponential backoff loop."""
+    base_delay = 3
+    
+    for attempt in range(max_retries + 1):
+        try:
+            return client.models.generate_content(
+                model=model,
+                contents=contents,
+                config=config
+            )
+        except Exception as e:
+            if attempt == max_retries:
+                print(f"Failed after {max_retries} retries: {e}")
+                raise e 
+          
+            delay = base_delay ** (attempt + 1)
+            print(f"Gemini API Error (or busy). Retrying in {delay} seconds... (Attempt {attempt + 1})")
+            time.sleep(delay)
+
 
 def get_match_prediction(match_id: int):
 
@@ -85,15 +108,17 @@ STRICT RULES:
 """
 
     try:
-        research_response = client.models.generate_content(
+        research_response = generate_with_retry(
+            client=client,
             model='gemini-2.5-flash',
             contents=research_prompt,
             config=types.GenerateContentConfig(
                 tools=[types.Tool(google_search=types.GoogleSearch())],
                 temperature=0.7,
-            ),
+            )
         )
         research_text = research_response.text
+
 
     except Exception as e:
         print(f"Error in research step: {e}")
@@ -113,15 +138,17 @@ ANALYSIS:
 """
 
     try:
-        final_response = client.models.generate_content(
+        final_response = generate_with_retry(
+            client=client,
             model='gemini-2.5-flash',
             contents=structure_prompt,
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
                 response_schema=PredictionResponse,
                 temperature=0.2,
-            ),
+            )
         )
+
 
     except Exception as e:
         print(f"Error in structure step: {e}")

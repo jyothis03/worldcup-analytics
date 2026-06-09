@@ -32,6 +32,6 @@ def predict_match(match_id: int):
     prediction = get_match_prediction(match_id)
 
     if not prediction:
-        raise HTTPException(status_code=404, detail=f"Prediction failed. Make sure Match ID {match_id} exists.")
+        raise HTTPException(status_code=404, detail=f"Prediction failed.")
         
     return prediction
