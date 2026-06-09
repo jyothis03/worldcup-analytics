@@ -1,5 +1,6 @@
-from fastapi import APIRouter, Query
-from backend.app.services.data_service import get_all_matches, get_match_by_id
+from fastapi import APIRouter, Query, HTTPException
+from backend.app.services.data_service import get_all_matches, get_match_by_id, get_all_teams, get_all_venues
+
 
 router = APIRouter(prefix="/api/v1", tags=["predictions"])
 
@@ -9,21 +10,22 @@ def get_matches():
     return {"matches": matches}
 
 @router.get("/match/{match_id}")
-async def get_match_detail(match_id: int):
-    """Get detailed static data for a specific match. Currently returning dummy data."""
-    return {
-        "id": match_id,
-        "home_team": "Brazil",
-        "away_team": "France",
-        "venue": "MetLife Stadium",
-        "date": "2026-06-15T18:00:00Z",
-        "group": "Group A",
-        "type": "Group Stage",
-        "home_team_fifa_rank": 3,
-        "away_team_fifa_rank": 2,
-        "climate": "Humid",
-        "altitude_meters": 0
-    }
+def get_match_detail(match_id: int):
+    match = get_match_by_id(match_id)
+    if not match:
+        raise HTTPException(status_code=404, detail=f"Match with ID {match_id} not found")
+    return match
+
+@router.get("/teams")
+def get_teams():
+    """Returns the list of all teams and their stats"""
+    return {"teams": get_all_teams()}
+
+@router.get("/venues")
+def get_venues():
+    """Returns the list of all venues and their climate/altitude"""
+    return {"venues": get_all_venues()}
+
 
 @router.get("/predict")
 async def predict(match_id: int = Query(..., description="The ID of the match to predict")):
