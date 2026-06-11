@@ -3,7 +3,7 @@
 TactiqAI is an AI-powered tactical prediction engine built for the 2026 FIFA World Cup. It uses a custom **Two-Step AI Agent Architecture** powered by Google Gemini 2.5 Flash to combine static local data (venues, altitudes, team stats) with live web-scraped injury reports and squad news to generate highly accurate, structured match predictions.
 
 ![TactiqAI Dashboard](frontend/public/dashboard.png) 
-
+![TactiqAI Predictions](frontend/public/prediction1.png) 
 ## 🚀 Features
 
 - **Agentic AI Pipeline:** 

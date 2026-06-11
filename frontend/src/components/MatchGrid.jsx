@@ -27,17 +27,8 @@ export const MatchGrid = ({ matches, onPredict }) => {
   return (
     <div className="glass-panel" style={{ maxWidth: '1200px', margin: '0 auto', overflow: 'hidden' }}>
       
-      {/* Table Header */}
-      <div className="data-row data-header">
-        <div>Date & Time</div>
-        <div>Matchup</div>
-        <div>Group</div>
-        <div>Location</div>
-        <div style={{ textAlign: 'right' }}>Action</div>
-      </div>
-
-      {/* Rows */}
-      <div>
+      {/* Match Grid */}
+      <div className="match-grid-container">
         {currentMatches.map((match, idx) => (
           <div key={match.id} style={{ animationDelay: `${idx * 0.05}s` }} className="animate-slide-up">
             <MatchCard match={match} onPredict={onPredict} />
