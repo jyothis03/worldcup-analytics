@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, AlertTriangle, Shield } from 'lucide-react';
+import { getFlagUrl } from '../utils/flags';
 
 export const PredictionOverlay = ({ prediction, onClose }) => {
   if (!prediction) return null;
@@ -16,13 +17,23 @@ export const PredictionOverlay = ({ prediction, onClose }) => {
 
         {/* Score Prediction */}
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '32px', marginBottom: '40px' }}>
-          <div style={{ textAlign: 'right' }}>
+          <div style={{ textAlign: 'right', display: 'flex', alignItems: 'center', gap: '16px' }}>
             <h3 style={{ fontSize: '24px' }}>{prediction?.home_team?.name || 'Home'}</h3>
+            <img 
+              src={getFlagUrl(prediction?.home_team?.name)} 
+              alt={prediction?.home_team?.name} 
+              style={{ width: '36px', height: '36px', borderRadius: '50%', objectFit: 'cover', border: '2px solid rgba(0, 255, 136, 0.2)' }} 
+            />
           </div>
           <div style={{ fontSize: '48px', fontWeight: 700, fontFamily: 'Outfit', color: 'var(--accent-neon)', borderBottom: '2px solid var(--border-color)', padding: '0 24px' }}>
             {prediction?.predicted_score?.home ?? '-'} - {prediction?.predicted_score?.away ?? '-'}
           </div>
-          <div style={{ textAlign: 'left' }}>
+          <div style={{ textAlign: 'left', display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <img 
+              src={getFlagUrl(prediction?.away_team?.name)} 
+              alt={prediction?.away_team?.name} 
+              style={{ width: '36px', height: '36px', borderRadius: '50%', objectFit: 'cover', border: '2px solid rgba(0, 255, 136, 0.2)' }} 
+            />
             <h3 style={{ fontSize: '24px' }}>{prediction?.away_team?.name || 'Away'}</h3>
           </div>
         </div>
@@ -48,10 +59,17 @@ export const PredictionOverlay = ({ prediction, onClose }) => {
             if (!team) return null;
             return (
             <div key={idx} style={{ background: 'rgba(0, 255, 136, 0.03)', padding: '20px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
-              <h4 style={{ color: 'var(--accent-neon)', marginBottom: '16px', fontSize: '18px', display: 'flex', justifyContent: 'space-between' }}>
-                {team?.name || 'Unknown'}
-                <span style={{ fontSize: '12px', color: 'var(--text-muted)', fontFamily: 'Outfit' }}>{team?.expected_formation || 'TBD'}</span>
-              </h4>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                <img 
+                  src={getFlagUrl(team?.name)} 
+                  alt={team?.name} 
+                  style={{ width: '28px', height: '28px', borderRadius: '50%', objectFit: 'cover', border: '1px solid rgba(0, 255, 136, 0.2)' }} 
+                />
+                <h4 style={{ color: 'var(--accent-neon)', fontSize: '18px', display: 'flex', justifyContent: 'space-between', flex: 1, alignItems: 'center' }}>
+                  {team?.name || 'Unknown'}
+                  <span style={{ fontSize: '12px', color: 'var(--text-muted)', fontFamily: 'Outfit' }}>{team?.expected_formation || 'TBD'}</span>
+                </h4>
+              </div>
               
               <div style={{ marginBottom: '16px' }}>
                 <span style={{ color: 'var(--text-secondary)', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1px' }}>Key Players</span>

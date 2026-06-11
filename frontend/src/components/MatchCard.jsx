@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, MapPin, Activity } from 'lucide-react';
+import { getFlagUrl } from '../utils/flags';
 
 export const MatchCard = ({ match, onPredict }) => {
   const dateObj = new Date(match.date);
@@ -25,9 +26,25 @@ export const MatchCard = ({ match, onPredict }) => {
 
       {/* Body: Teams */}
       <div className="match-card-body">
-        <span className="match-card-team">{match.home_team}</span>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px', flex: 1 }}>
+          <img 
+            src={getFlagUrl(match.home_team)} 
+            alt={match.home_team} 
+            style={{ width: '48px', height: '48px', borderRadius: '50%', objectFit: 'cover', border: '2px solid rgba(0, 255, 136, 0.2)' }} 
+          />
+          <span className="match-card-team">{match.home_team}</span>
+        </div>
+        
         <span className="match-card-vs">VS</span>
-        <span className="match-card-team">{match.away_team}</span>
+        
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px', flex: 1 }}>
+          <img 
+            src={getFlagUrl(match.away_team)} 
+            alt={match.away_team} 
+            style={{ width: '48px', height: '48px', borderRadius: '50%', objectFit: 'cover', border: '2px solid rgba(0, 255, 136, 0.2)' }} 
+          />
+          <span className="match-card-team">{match.away_team}</span>
+        </div>
       </div>
 
       {/* Footer: Venue and Action */}
